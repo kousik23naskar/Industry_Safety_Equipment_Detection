@@ -15,8 +15,9 @@
 
 Clone the repository
 
+
 ```bash
-[https://github.com/kousik23naskar/Industry_Safety_Equipment_Detection](https://github.com/kousik23naskar/Industry_Safety_Equipment_Detection)
+https://github.com/kousik23naskar/Industry_Safety_Equipment_Detection
 ```
 ### STEP 01- Create a conda environment after opening the repository
 
