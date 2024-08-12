@@ -117,9 +117,9 @@ open up you local host and port
 
     AWS_REGION = us-east-1
 
-    AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
+    AWS_ECR_LOGIN_URI = demo>>  941377149591.dkr.ecr.us-east-1.amazonaws.com
 
-    ECR_REPOSITORY_NAME = Detection-app
+    ECR_REPOSITORY_NAME = detectionapp
 
 
 
