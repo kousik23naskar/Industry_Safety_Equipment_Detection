@@ -6,7 +6,8 @@
 2. entity
 3. components
 4. pipelines
-5. app.py
+5. helper.py
+6. app.py
 
 
 # How to run?
@@ -15,16 +16,16 @@
 Clone the repository
 
 ```bash
-https://github.com/entbappy/End-to-end-waste-detection
+[https://github.com/kousik23naskar/Industry_Safety_Equipment_Detection](https://github.com/kousik23naskar/Industry_Safety_Equipment_Detection)
 ```
 ### STEP 01- Create a conda environment after opening the repository
 
 ```bash
-conda create -p wvenv python=3.11 -y
+conda create -p venv python=3.11 -y
 ```
 
 ```bash
-conda activate venv
+conda activate ./venv
 ```
 
 
@@ -36,7 +37,7 @@ pip install -r requirements.txt
 
 ```bash
 # Finally run the following command
-python app.py
+streamlit run app.py
 ```
 
 Now,
@@ -79,7 +80,7 @@ open up you local host and port
 
 	
 ## 3. Create ECR repo to store/save docker image
-    - Save the URI: 566373416292.dkr.ecr.ap-south-1.amazonaws.com/waste
+    - Save the URI: 566373416292.dkr.ecr.ap-south-1.amazonaws.com/Detectionapp
 
 	
 ## 4. Create EC2 machine (Ubuntu) 
