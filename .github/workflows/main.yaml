@@ -83,9 +83,9 @@ jobs:
         run: |
           docker pull ${{ secrets.AWS_ECR_LOGIN_URI }}/${{ secrets.ECR_REPOSITORY_NAME }}:latest
 
-       - name: Stop and Remove Existing Container
-         run: |
-           docker ps -q --filter "name=SafetyEquipmentDetectionapp" | grep -q . && docker stop SafetyEquipmentDetectionapp && docker rm -fv simpleappSafetyEquipmentDetectionapp
+      - name: Stop and Remove Existing Container
+        run: |
+          docker ps -q --filter "name=SafetyEquipmentDetectionapp" | grep -q . && docker stop SafetyEquipmentDetectionapp && docker rm -fv simpleappSafetyEquipmentDetectionapp
 
       - name: Run Docker Image to Serve Users
         run: |
