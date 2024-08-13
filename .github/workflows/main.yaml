@@ -85,7 +85,7 @@ jobs:
 
       - name: Stop and Remove Existing Container
         run: |
-          docker ps -q --filter "name=SafetyEquipmentDetectionapp" | grep -q . && docker stop SafetyEquipmentDetectionapp && docker rm -fv simpleappSafetyEquipmentDetectionapp
+          docker ps -q --filter "name=SafetyEquipmentDetectionapp" | grep -q . && docker stop SafetyEquipmentDetectionapp && docker rm -fv SafetyEquipmentDetectionapp
 
       - name: Run Docker Image to Serve Users
         run: |
