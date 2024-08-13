@@ -128,15 +128,15 @@ open up you local host and port
 
 ## Save pass:
 
-# password
+### password
 
 ## Run from terminal:
 
-docker build -t chickenapp.azurecr.io/chicken:latest .
+docker build -t detectionapp.azurecr.io/detection:latest .
 
-docker login chickenapp.azurecr.io
+docker login detectionapp.azurecr.io
 
-docker push chickenapp.azurecr.io/chicken:latest
+docker push detectionapp.azurecr.io/detection:latest
 
 
 ## Deployment Steps:
