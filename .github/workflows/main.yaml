@@ -75,7 +75,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
-      - name: Login to Amazon ECR
+      - name: Login to Amazon ECR Private
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
 
@@ -83,12 +83,9 @@ jobs:
         run: |
           docker pull ${{ secrets.AWS_ECR_LOGIN_URI }}/${{ secrets.ECR_REPOSITORY_NAME }}:latest
 
-      - name: Stop and Remove Existing Container
-        run: |
-          if docker ps -q --filter "name=SafetyEquipmentDetectionapp"; then
-            docker stop SafetyEquipmentDetectionapp
-            docker rm -fv SafetyEquipmentDetectionapp
-          fi
+      # - name: Stop and Remove Existing Container
+      #   run: |
+      #     docker ps -q --filter "name=SafetyEquipmentDetectionapp" | grep -q . && docker stop SafetyEquipmentDetectionapp && docker rm -fv simpleappSafetyEquipmentDetectionapp
 
       - name: Run Docker Image to Serve Users
         run: |
