@@ -1,7 +1,7 @@
 <h1 align="center">🦺 Industry Safety Equipment Detection App using YOLOv8 👷</h1>
 
 <p align="center">
-  <img src="artifacts/Safety_detection_homepage.png" alt="Industry Safety Equipment Detection" width="600"/>
+  <img src="image/Safety_detection_homepage.png" alt="Industry Safety Equipment Detection" width="600"/>
 </p>
 
 <p>
@@ -76,7 +76,7 @@ To run the project locally, follow these steps:
 ## Results and Discussion 🎯🏆
 In this section, we present the results of industry safety equipment detection experiments. We discuss the model's performance, its strengths, limitations, and potential areas of improvement. We also provide visualizations of the safety equipment detection.
 
-<img width="1028" alt="detection image" src="artifacts/streamlit_safety_equipment_detection_image.png">
+<img width="1028" alt="detection image" src="image/streamlit_safety_equipment_detection_image.png">
 
 - **Performance**
 
