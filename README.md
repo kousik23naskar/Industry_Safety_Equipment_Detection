@@ -1,147 +1,111 @@
-# Industry_Safety_Equipment_Detection
+<h1 align="center">🦺 Industry Safety Equipment Detection App using YOLOv8 👷</h1>
 
-## Workflows
+<p align="center">
+  <img src="artifacts/Safety_detection_homepage.png" alt="Industry Safety Equipment Detection" width="600"/>
+</p>
 
-1. constants
-2. entity
-3. components
-4. pipelines
-5. helper.py
-6. app.py
+<p>
+  Welcome to the Industry Safety Equipment Detection App! This repository contains the code and resources to detect safety equipment in images and live video streams using YOLOv8. 🦺
+</p>
 
+## Project Overview 💡
+This project utilizes [YOLOv8](https://docs.ultralytics.com/), a state-of-the-art model for object detection, segmentation, and classification. [YOLOv8](https://docs.ultralytics.com/) is designed for high-speed and accurate detection. It excels at identifying and classifying objects in images, making it ideal for tasks like safety equipment detection. In this application, [YOLOv8](https://docs.ultralytics.com/) is used to detect and classify safety equipment such as helmets, gloves, and safety glasses. The model supports:
+1. **Training**: Train the detection model with your dataset.
+2. **Prediction**: Upload images to detect safety equipment.
+3. **Live Detection**: Perform real-time safety equipment detection using your webcam.
 
-# How to run?
-### STEPS:
+## Dataset 📊
+The model is trained using a custom dataset of industry safety equipment, annotated with [Roboflow](https://roboflow.com/). 🫡 **Roboflow** is a powerful tool for managing and annotating image data, allowing users to easily label objects, create datasets, and augment images. The dataset includes various safety gear items like **helmets, goggles, jackets, gloves, and footwear**, all captured in industrial environments. This rich and diverse dataset helps the model learn to detect and classify different types of safety equipment accurately.
 
-Clone the repository
+## Model Training 🧑🏻‍💻
+The model used in this project is [YOLOv8](https://docs.ultralytics.com/), a powerful open-source object detection model. To train the model, the following steps are performed:
 
+  - **Training Pipeline**: The `TrainPipeline` class handles the training process.
+  - **Execution**: The training is initiated through the Streamlit interface, providing real-time feedback and progress updates.
 
-```bash
-https://github.com/kousik23naskar/Industry_Safety_Equipment_Detection
-```
-### STEP 01- Create a conda environment after opening the repository
+## Detection 🕵️
+The application allows you to make detections on uploaded images. Here's how it works:
 
-```bash
-conda create -p venv python=3.11 -y
-```
+  - **Upload an Image**: Choose an image file in JPEG or PNG format.
+  - **Run Prediction**: Click the "Start Prediction" button to process the image using the trained YOLOv8 model.
+  - **View Results**: The predicted image with bounding boxes around detected safety equipment is displayed.
 
-```bash
-conda activate ./venv
-```
+## Live Detection 🎥
 
+The app also supports live detection using your webcam:
 
-### STEP 02- install the requirements
-```bash
-pip install -r requirements.txt
-```
+  - **Start Live Detection**: Click the "Start Live Detection" button to begin streaming video from your camera.
+  - **Real-Time Predictions**: The app processes each frame in real-time, displaying bounding boxes and labels for detected safety equipment.
+  - **Stop Live Detection**: Click the "Stop Live Detection" button to end the session.
 
+## Usage 💪🏻
+To run the project locally, follow these steps:
 
-```bash
-# Finally run the following command
-streamlit run app.py
-```
+1. **Clone this repository:**
+  ```bash
+  git clone https://github.com/kousik23naskar/Industry_Safety_Equipment_Detection
+  ```
+2. **Navigate to the project directory:**
+  ```bash
+  cd Industry_Safety_Equipment_Detection
+  ```
+3. **Create a conda environment:**
+  ```bash
+  conda create -p venv python=3.11 -y
+  ```
+4. **Activate the environment:** 
+  ```bash
+  conda activate ./venv
+  ```
+5. **Install the necessary dependencies:** 🛠️
+  ```bash
+  pip install -r requirements.txt
+  ```
+6. **Run the Streamlit app:** 
+  ```bash
+  streamlit run app.py
+  ``` 
+7. Open your web browser and go to the URL provided by **Streamlit** (usually `http://localhost:8501`)
 
-Now,
-```bash
-open up you local host and port
-```
+8. Interact with the app:
+  - **Home Page**: Learn about the project and its features.
+  - **Train Page**: Train the model with your dataset.
+  - **Predict Page**: Upload an image and view predictions.
+  - **Live Detection Page**: Stream live video and perform real-time detection.
 
+## Results and Discussion 🎯🏆
+In this section, we present the results of industry safety equipment detection experiments. We discuss the model's performance, its strengths, limitations, and potential areas of improvement. We also provide visualizations of the safety equipment detection.
 
+<img width="1028" alt="detection image" src="artifacts/streamlit_safety_equipment_detection_image.png">
 
-# AWS-CICD-Deployment-with-Github-Actions
+- **Performance**
 
-## 1. Login to AWS console.
+  - **Accuracy:** The model effectively identifies various safety equipment with high precision.
+  - **Speed:** Real-time processing is efficient, making it suitable for live detection.
 
-## 2. Create IAM user for deployment
+- **Strengths**
+  - **Robust Detection:** Capable of detecting a wide range of safety equipment.
+  - **User-Friendly Interface:** Streamlit interface enhances user experience with real-time feedback.
 
-	#with specific access
+- **Limitation**
+  - **Lighting Conditions:** Detection performance may be affected by poor lighting.
+  - **Dataset Variability:** The model's accuracy depends on the diversity of the training data.
 
-	1. EC2 access : It is virtual machine
+- **Potential Areas of Improvement**
+  - **Dataset Expansion:** Increasing the variety of images in the dataset could improve accuracy.
+  - **Model Fine-Tuning**: Further optimization through hyperparameter tuning, such as adjusting the number of epochs, could enhance detection performance.
 
-	2. ECR: Elastic Container registry to save your docker image in aws
+## Contributing 🤝
+We welcome contributions to improve this project. If you have suggestions, bug fixes, or new features, please submit a pull request. Your input is highly valued!
 
+## License 🔐
+This project is licensed under the [MIT License](LICENSE).
 
-	#Description: About the deployment
+## Contact 📩
+For any questions or inquiries, feel free to reach out to us:
+- **Email:** kousik23naskar@gmail.com
+- **LinkedIn:** [Kousik Naskar](https://www.linkedin.com/in/dr-kousik-naskar/)
 
-	1. Build docker image of the source code
+Let's make accurate stock market predictions together!
 
-	2. Push your docker image to ECR
-
-	3. Launch Your EC2 
-
-	4. Pull Your image from ECR in EC2
-
-	5. Lauch your docker image in EC2
-
-	#Policy:
-
-	1. AmazonEC2ContainerRegistryFullAccess
-
-	2. AmazonEC2FullAccess
-
-	
-## 3. Create ECR repo to store/save docker image
-    - Save the URI: 941377149591.dkr.ecr.us-east-1.amazonaws.com/detectionapp
-
-	
-## 4. Create EC2 machine (Ubuntu) 
-
-## 5. Open EC2 and Install docker in EC2 Machine:
-	
-	
-	#optinal
-
-	sudo apt-get update -y
-
-	sudo apt-get upgrade
-	
-	#required
-
-	curl -fsSL https://get.docker.com -o get-docker.sh
-
-	sudo sh get-docker.sh
-
-	sudo usermod -aG docker ubuntu
-
-	newgrp docker
-	
-# 6. Configure EC2 as self-hosted runner:
-    setting>actions>runner>new self hosted runner> choose os> then run command one by one
-
-
-# 7. Setup github secrets:
-
-    AWS_ACCESS_KEY_ID=
-
-    AWS_SECRET_ACCESS_KEY=
-
-    AWS_REGION = us-east-1
-
-    AWS_ECR_LOGIN_URI = demo>>  941377149591.dkr.ecr.us-east-1.amazonaws.com
-
-    ECR_REPOSITORY_NAME = detectionapp
-
-
-
-
-# AZURE-CICD-Deployment-with-Github-Actions
-
-## Save pass:
-
-### password
-
-## Run from terminal:
-
-docker build -t detectionapp.azurecr.io/detection:latest .
-
-docker login detectionapp.azurecr.io
-
-docker push detectionapp.azurecr.io/detection:latest
-
-
-## Deployment Steps:
-
-1. Build the Docker image of the Source Code
-2. Push the Docker image to Container Registry
-3. Launch the Web App Server in Azure 
-4. Pull the Docker image from the container registry to Web App server and run 
+Thank you for visiting this project repository. Happy detection! 😇
